@@ -1,0 +1,10 @@
+{
+  "name": "poc-joi-date-validation-without-hour-and-timezone",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Fernando Reis Guimarães <fernandobhz@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "joi": "^14.3.1"
+  }
+}
