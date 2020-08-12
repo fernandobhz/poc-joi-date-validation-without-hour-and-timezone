@@ -46,3 +46,29 @@ log(
     birth_date: "1986-04-05",
   })
 );
+
+log(
+  "(V) It has worked, date with time set to zero",
+  Joi.object({
+    birth_date: Joi.string()
+      .regex(
+        /^\d{4}-([0]\d|1[0-2])-([0-2]\d|3[01])[T][0][0][:][0][0][:][0][0][.][0][0][0][Z]$/
+      )
+      .required(),
+  }).validate({
+    birth_date: "1986-04-05T00:00:00.000Z",
+  })
+);
+
+log(
+  "(V) It has worked, it didn't allow date-only string",
+  Joi.object({
+    birth_date: Joi.string()
+      .regex(
+        /^\d{4}-([0]\d|1[0-2])-([0-2]\d|3[01])[T][0][0][:][0][0][:][0][0][.][0][0][0][Z]$/
+      )
+      .required(),
+  }).validate({
+    birth_date: "1986-04-05",
+  })
+);
