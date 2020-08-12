@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Fernando Reis Guimarães <fernandobhz@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "joi": "^14.3.1"
   }

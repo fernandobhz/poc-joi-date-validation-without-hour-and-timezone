@@ -8,7 +8,7 @@ const log = (condition, { error, value }) => {
 };
 
 log(
-  "Joi date => see how joi handle date-only string with date() validation",
+  "( ) See how joi handle date-only string with date() validation",
   Joi.object({
     birth_date: Joi.date().required(),
   }).validate({
@@ -17,7 +17,7 @@ log(
 );
 
 log(
-  "Joi date => validation has NOT worked for date-only",
+  "(X) It has NOT worked for date-only",
   Joi.object({
     birth_date: Joi.date().required(),
   }).validate({
@@ -26,7 +26,7 @@ log(
 );
 
 log(
-  "Joi regex => worked, validation has worked, invalid date-only input since it has time",
+  "(V) It has worked, validation has worked, invalid date-only input since it has time",
   Joi.object({
     birth_date: Joi.string()
       .regex(/^\d{4}-([0]\d|1[0-2])-([0-2]\d|3[01])$/)
@@ -37,7 +37,7 @@ log(
 );
 
 log(
-  "Joi regex, validation has worked, valid date-only input",
+  "(V) It has worked, valid date-only input",
   Joi.object({
     birth_date: Joi.string()
       .regex(/^\d{4}-([0]\d|1[0-2])-([0-2]\d|3[01])$/)
